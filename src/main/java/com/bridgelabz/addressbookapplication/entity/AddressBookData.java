@@ -1,6 +1,7 @@
 package com.bridgelabz.addressbookapplication.entity;
 
 import com.bridgelabz.addressbookapplication.dto.AddressBookDTO;
+import lombok.Data;
 
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="AddressBook")
 
-public class AddressBookData {
+public @Data class AddressBookData {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int personId;
@@ -23,37 +24,6 @@ public class AddressBookData {
         this.mobileNo = addressBookDTO.mobileNo;
     }
 
-    public AddressBookData() { }
-
-    public int getPersonId() {
-        return personId;
-    }
-
-    public void setPersonId(int personId) {
-        this.personId = personId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getMobileNo() {
-        return mobileNo;
-    }
-
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
+    public AddressBookData(){
     }
 }
