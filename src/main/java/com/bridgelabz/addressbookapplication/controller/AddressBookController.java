@@ -16,7 +16,7 @@ import java.util.List;
 public class AddressBookController {
     @Autowired
 
-     IAddressBookService addressBookService;
+     private IAddressBookService addressBookService;
 
 
     @RequestMapping(value = {" ", "/", "/get"})
